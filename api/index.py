@@ -2,23 +2,6 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import List
 
-app = FastAPI()
-
-# Model soal dan jawaban
-class Question(BaseModel):
-    question: str
-    options: List[str]
-
-class QuizRequest(BaseModel):
-    bab: int
-    answers: List[int]  # daftar jawaban user, nomor pilihan (1-based)
-
-class QuizResponse(BaseModel):
-    results: List[bool]  # benar/salah per soal
-    score: int
-    total: int
-
-
 # Data quiz untuk 7 bab, tiap bab berisi list soal
 quiz_data = {
     1: [
