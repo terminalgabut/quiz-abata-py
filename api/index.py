@@ -2,6 +2,9 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import List
 
+app = FastAPI()
+
+
 # Data quiz untuk 7 bab, tiap bab berisi list soal
 quiz_data = {
     1: [
