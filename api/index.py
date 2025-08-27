@@ -1,9 +1,7 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from typing import List
-
-app = FastAPI()
-
+from typing import List, Dict, Any
 
 # Data quiz untuk 7 bab, tiap bab berisi list soal
 quiz_data = {
